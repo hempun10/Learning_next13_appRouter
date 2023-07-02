@@ -5,11 +5,13 @@ import { useRouter } from "next/navigation";
 import { axios } from "axios";
 
 const SignUpPage = () => {
+  const router = useRouter();
   const [user, setuser] = useState({
     email: "",
     password: "",
     username: "",
   });
+  const [buttonDisabled, setbuttonDisabled] = useState(false);
   const onSignUp = async () => {};
   return (
     <div className=" flex flex-col items-center justify-center min-h-screen py-2">
