@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
+import { BiArrowBack } from "react-icons/bi";
 
 const ProfilePage = () => {
   const router = useRouter();
@@ -33,11 +34,16 @@ const ProfilePage = () => {
 
   return (
     <div className=" text-center flex flex-col gap-[15rem]">
-      <div className=" flex  justify-evenly p-3 shadow-lg">
+      <div className=" flex  justify-between p-3 shadow-lg">
+        <Link href={"/"}>
+          <h1 className=" flex justify-center items-center gap-2 text-lg p-2">
+            <BiArrowBack /> Back to Home
+          </h1>
+        </Link>
         <h1 className=" text-lg p-2">Profile Page </h1>
         <button
           onClick={logOut}
-          className=" p-2  bg-red-600  rounded-lg text-white transition-all hover:bg-transparent hover:text-black border border-black"
+          className=" p-2  bg-red-600  rounded-lg text-white transition-all hover:bg-transparent hover:text-black hover:border-2 border-black"
         >
           Log Out
         </button>
@@ -45,7 +51,7 @@ const ProfilePage = () => {
       {data && (
         <Link
           href={`/profile/${data}`}
-          className=" text-center p-2 border-2 border-black w-[20%] m-auto rounded-full hover:bg-black hover:text-white"
+          className=" text-center p-2 border-2 border-black w-[20%] m-auto rounded-full hover:bg-black hover:text-white transition-all"
         >
           See My Profile
         </Link>
