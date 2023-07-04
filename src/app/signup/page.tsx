@@ -43,45 +43,49 @@ const SignUpPage = () => {
     }
   }, [user]);
   return (
-    <div className=" flex flex-col items-center justify-center min-h-screen py-2 ">
-      <h1 className="text-3xl">{loading ? "Proccessing....." : "SignUp"}</h1>
-      <hr />
-      <label htmlFor="username">username</label>
-      <input
-        className=" p-2  rounded-lg text-black"
-        type="text"
-        value={user.username}
-        onChange={(e) => setuser({ ...user, username: e.target.value })}
-        placeholder="Username"
-      />
-      <label htmlFor="email">Email</label>
-      <input
-        className=" p-2  rounded-lg text-black"
-        type="email"
-        value={user.email}
-        onChange={(e) => setuser({ ...user, email: e.target.value })}
-        placeholder="abc@gmail.com"
-      />
-      <label htmlFor="password">password</label>
-      <input
-        className=" p-2  rounded-lg text-black"
-        type="password"
-        value={user.password}
-        onChange={(e) => setuser({ ...user, password: e.target.value })}
-        placeholder="password"
-      />
-      <button
-        onClick={onSignUp}
-        className=" bg-gray-300 p-2 rounded-lg text-white mt-4"
-      >
-        {buttonDisabled ? " No signUp" : "SignUp"}
-      </button>
-      <span>
-        Already Account
-        <Link href={"/login"} className=" underline">
-          Login!
-        </Link>
-      </span>
+    <div className=" flex  items-center justify-center min-h-screen py-2 ">
+      <div className="flex flex-col shadow-xl rounded-lg p-14 gap-3">
+        <h1 className="text-3xl uppercase font-bold text-center">
+          {loading ? "Please Wait.." : "Sign Up"}
+        </h1>
+
+        <label htmlFor="username">username</label>
+        <input
+          className=" p-2  rounded-lg text-black"
+          type="text"
+          value={user.username}
+          onChange={(e) => setuser({ ...user, username: e.target.value })}
+          placeholder="Username"
+        />
+        <label htmlFor="email">Email</label>
+        <input
+          className=" p-2  rounded-lg text-black"
+          type="email"
+          value={user.email}
+          onChange={(e) => setuser({ ...user, email: e.target.value })}
+          placeholder="abc@gmail.com"
+        />
+        <label htmlFor="password">password</label>
+        <input
+          className=" p-2  rounded-lg text-black"
+          type="password"
+          value={user.password}
+          onChange={(e) => setuser({ ...user, password: e.target.value })}
+          placeholder="password"
+        />
+        <button
+          onClick={onSignUp}
+          className={` bg-black p-2 rounded-lg text-white mt-4 hover:outline hover:bg-transparent outline-black  transition-all hover:text-black disabled:cursor-not-allowed`}
+        >
+          {buttonDisabled ? "Fill all input" : "SignUp"}
+        </button>
+        <span>
+          Already Account &nbsp;
+          <Link href={"/login"} className=" underline">
+            Login!
+          </Link>
+        </span>
+      </div>
     </div>
   );
 };

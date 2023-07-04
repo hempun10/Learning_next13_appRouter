@@ -11,8 +11,9 @@ export default function Home() {
       <Link
         className=" underline text-blue-500"
         href={
-          "/https://www.youtube.com/watch?v=iPGXk-i-VYU&list=PLRAV69dS1uWR7KF-zV6YPYtKYEHENETyE"
+          "https://www.youtube.com/watch?v=iPGXk-i-VYU&list=PLRAV69dS1uWR7KF-zV6YPYtKYEHENETyE"
         }
+        target="_blank"
       >
         Course Link
       </Link>

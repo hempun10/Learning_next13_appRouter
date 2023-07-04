@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
     }
     console.log(user);
 
-    user.isVerify = true;
+    user.isVerified = true;
     user.verifyToken = undefined;
     user.verifyTokenExpiry = undefined;
 

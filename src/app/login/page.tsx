@@ -36,37 +36,41 @@ const LoginPage = () => {
   }, [user]);
 
   return (
-    <div className=" flex flex-col items-center justify-center min-h-screen py-2">
-      <h1 className=" text-3xl">{isLoading ? " Processing..." : "Login"}</h1>
-      <hr />
-      <label htmlFor="email">Email</label>
-      <input
-        className=" p-2  rounded-lg text-black"
-        type="email"
-        value={user.email}
-        onChange={(e) => setuser({ ...user, email: e.target.value })}
-        placeholder="abc@gmail.com"
-      />
-      <label htmlFor="password">password</label>
-      <input
-        className=" p-2  rounded-lg text-black"
-        type="password"
-        value={user.password}
-        onChange={(e) => setuser({ ...user, password: e.target.value })}
-        placeholder="password"
-      />
-      <button
-        onClick={onLogin}
-        className=" bg-gray-300 p-2 rounded-lg text-white mt-4"
-      >
-        LogIn
-      </button>
-      <span>
-        Create New Account
-        <Link href={"/signup"} className=" underline">
-          SignUp!
-        </Link>
-      </span>
+    <div className=" flex items-center justify-center min-h-screen py-2 ">
+      <div className=" shadow-xl flex flex-col p-16 rounded-lg gap-5">
+        <h1 className=" text-3xl uppercase font-bold text-center">
+          {isLoading ? "Please Wait..." : "Login"}
+        </h1>
+        <hr />
+        <label htmlFor="email">Email</label>
+        <input
+          className=" p-2  rounded-lg text-black outline outline-black   "
+          type="email"
+          value={user.email}
+          onChange={(e) => setuser({ ...user, email: e.target.value })}
+          placeholder="abc@gmail.com"
+        />
+        <label htmlFor="password">password</label>
+        <input
+          className=" p-2  rounded-lg text-black outline outline-black"
+          type="password"
+          value={user.password}
+          onChange={(e) => setuser({ ...user, password: e.target.value })}
+          placeholder="password"
+        />
+        <button
+          onClick={onLogin}
+          className=" bg-black p-2 rounded-lg text-white mt-4 hover:outline hover:bg-transparent outline-black  transition-all hover:text-black"
+        >
+          LogIn
+        </button>
+        <span>
+          Create New Account &nbsp;
+          <Link href={"/signup"} className=" underline">
+            SignUp!
+          </Link>
+        </span>
+      </div>
     </div>
   );
 };
