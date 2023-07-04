@@ -59,7 +59,7 @@ const LoginPage = () => {
         onClick={onLogin}
         className=" bg-gray-300 p-2 rounded-lg text-white mt-4"
       >
-        SignUp
+        LogIn
       </button>
       <span>
         Create New Account
