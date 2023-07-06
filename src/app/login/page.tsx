@@ -70,6 +70,11 @@ const LoginPage = () => {
             SignUp!
           </Link>
         </span>
+        <span className=" text-center mb-3">
+          <Link href={"/forgetpassemail"} className=" underline">
+            Forget your password
+          </Link>
+        </span>
       </div>
     </div>
   );
