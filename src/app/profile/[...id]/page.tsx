@@ -20,7 +20,7 @@ const UserProfile = ({ params }: any) => {
   return (
     <div className=" flex flex-col py-2 gap-[17rem]">
       <div className=" flex  justify-between p-3 shadow-lg">
-        <Link href={"/"}>
+        <Link href="/">
           <h1 className=" flex justify-center items-center gap-2 text-lg p-2">
             <BiArrowBack /> Back to Home
           </h1>
