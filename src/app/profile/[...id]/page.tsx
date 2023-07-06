@@ -25,7 +25,10 @@ const UserProfile = ({ params }: any) => {
             <BiArrowBack /> Back to Home
           </h1>
         </Link>
-        <h1 className=" text-lg p-2 capitalize">{params.id}'s Profile Page</h1>
+        <h1 className="text-lg p-2 capitalize">
+          {params.id}&apos;s Profile Page
+        </h1>
+
         <button
           onClick={logOut}
           className=" p-2  bg-red-600  rounded-lg text-white transition-all hover:bg-transparent hover:text-black hover:border-2 border-black"
