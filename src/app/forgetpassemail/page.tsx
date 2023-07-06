@@ -1,8 +1,10 @@
 "use client";
 
 import axios from "axios";
+import Link from "next/link";
 import React, { useState } from "react";
 import { toast } from "react-hot-toast";
+import { BiArrowBack } from "react-icons/bi";
 
 const PasswordResetPage = () => {
   const [email, setEmail] = useState({
@@ -53,6 +55,12 @@ const PasswordResetPage = () => {
         >
           Submit
         </button>
+        <Link
+          href={"/login"}
+          className=" flex items-center justify-center gap-2"
+        >
+          <BiArrowBack /> Back to Login
+        </Link>
       </div>
     </div>
   );
