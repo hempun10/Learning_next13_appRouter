@@ -19,7 +19,10 @@ const PasswordResetPage = () => {
         throw new Error("Email is required");
       }
 
-      const response = await axios.post("/api/users/forgetpassverify", email);
+      const response = await axios.post(
+        "/api/users/verifyuserforpassword",
+        email
+      );
 
       if (response.status === 200) {
         toast.success("Please check your mail for verification");
